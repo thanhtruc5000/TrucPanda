@@ -1,5 +1,45 @@
-<h1><%= @product.name %></h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= @product.name %></title>
+    <style>
+      /* CSS cho trang chi tiết sản phẩm - số 3 */
+      h1 {
+        font-size: 2rem;
+        color: #333;
+        text-align: center;
+      }
 
-<%= link_to "Back", products_path %>
-<%= link_to "Edit", edit_product_path(@product) %>
-<%= button_to "Delete", @product, method: :delete, data: { turbo_confirm: "Are you sure?" } %>
+      a {
+        color: #007bff;
+        text-decoration: none;
+        margin: 10px 0;
+        display: inline-block;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      button {
+        background-color: #dc3545;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #c82333;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1><%= @product.name %></h1>
+    <%= link_to "Quay lại", products_path %>
+    <%= link_to "Sửa", edit_product_path(@product) %>
+    <%= button_to "Xóa", @product, method: :delete, data: { turbo_confirm: "Are you sure?" } %>
+  </body>
+</html>

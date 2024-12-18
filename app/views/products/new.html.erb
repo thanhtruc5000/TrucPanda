@@ -1,4 +1,91 @@
-<h1>Thêm Sản Phẩm</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Thêm Sản Phẩm</title>
+    <style>
+      /* CSS cho trang thêm sản phẩm - số 2 */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 0;
+      }
 
-<%= render "form", product: @product %>
-<%= link_to "Cancel", products_path %>
+      h1 {
+        font-size: 2rem;
+        color: #333;
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      .container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+      }
+
+      .form-container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 90%;
+        max-width: 500px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      form input,
+      form textarea {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1rem;
+        background-color: #f9f9f9;
+      }
+
+      form input[type="submit"] {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        padding: 12px;
+        font-size: 1rem;
+        border-radius: 5px;
+      }
+
+      form input[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+
+      a {
+        color: #007bff;
+        text-decoration: none;
+        margin-top: 20px;
+        display: inline-block;
+        text-align: center;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <h1>Thêm Sản Phẩm</h1>
+    <div class="container">
+      <div class="form-container">
+        <%= render "form", product: @product %>
+        <%= link_to "Hủy bỏ", products_path %>
+      </div>
+    </div>
+  </body>
+</html>
