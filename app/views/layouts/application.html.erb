@@ -15,70 +15,14 @@
 
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <link rel="stylesheet" href="./assets/stylesheets/application.css">
 
-    <style>
-      /* Định dạng cơ bản cho body */
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-      }
-
-      /* Thanh điều hướng (nav) */
-      nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #007bff;
-        color: white;
-        padding: 10px 20px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      }
-
-      nav a {
-        color: white;
-        text-decoration: none;
-        font-size: 18px;
-        font-weight: bold;
-      }
-
-      nav button {
-        background-color: #ff4d4d;
-        color: white;
-        border: none;
-        padding: 8px 15px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-      }
-
-      nav button:hover {
-        background-color: #ff3333;
-      }
-
-      /* Phần nội dung chính (main) */
-      main {
-        max-width: 1200px;
-        margin: 20px auto;
-        padding: 20px;
-        background: white;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
-
-      /* Thêm icon cho trang chủ */
-      .icon {
-        margin-right: 10px;
-        vertical-align: middle;
-      }
-    </style>
   </head>
 
   <body>
+  <div class="notice"><%= notice %></div>
     <nav>
       <div>
-        <img class="icon" src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="Trang chủ" width="20" />
         <%= link_to "Trang chủ", root_path %>
       </div>
       <div>

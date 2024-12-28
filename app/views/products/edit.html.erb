@@ -1,58 +1,5 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Chỉnh Sửa Sản Phẩm</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f9f9f9;
-        margin: 0;
-        padding: 0;
-        position: relative;
-        min-height: 100vh;
-      }
+<link rel="stylesheet" href="./assets/stylesheets/edit.css">
 
-      h1 {
-        font-size: 2rem;
-        color: #333;
-        text-align: center;
-        margin-top: 30px;
-      }
-
-      .form-container {
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-      }
-
-      .product-actions {
-        position: absolute;
-        bottom: 20px;
-        right: 20px;
-        display: flex;
-        gap: 15px;
-      }
-
-      .product-actions a,
-      .product-actions button {
-        background-color: #007bff;
-        color: white;
-        padding: 10px 20px;
-        text-decoration: none;
-        border: none;
-        border-radius: 5px;
-        font-size: 1rem;
-        cursor: pointer;
-      }
-
-      .product-actions a:hover,
-      .product-actions button:hover {
-        background-color: #0056b3;
-      }
-    </style>
-  </head>
-
-  <body>
     <h1>Chỉnh sửa sản phẩm</h1>
 
     <div class="form-container">
@@ -62,5 +9,4 @@
     <div class="product-actions">
       <%= link_to "Hủy bỏ", @product %>
     </div>
-  </body>
-</html>
+

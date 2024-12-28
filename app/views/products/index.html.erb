@@ -1,45 +1,9 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Nước Tự Chế</title>
-    <style>
-      /* CSS cho trang danh sách sản phẩm - số 1 */
-      h1 {
-        font-size: 2rem;
-        color: #333;
-        text-align: center;
-      }
+<link rel="stylesheet" href="./assets/stylesheets/index.css">
 
-      #products {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-top: 20px;
-      }
-
-      #products div {
-        background-color: #f4f4f4;
-        margin: 10px;
-        padding: 10px 20px;
-        border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      }
-
-      #products div a {
-        text-decoration: none;
-        color: #333;
-        font-size: 1.2rem;
-      }
-
-      #products div a:hover {
-        color: #007bff;
-      }
-    </style>
-  </head>
-
-  <body>
-    <h1>Nước Tự Chế</h1>
-    <%= link_to "Thêm sản phẩm", new_product_path %>
+<h1><%= t ".title" %></h1>
+    
+    <%= link_to "Đăng nhập", new_session_path unless authenticated? %>
+    <%= link_to "Thêm sản phẩm", new_product_path if authenticated? %>
     <div id="products">
       <% @products.each do |product| %>
         <div>
@@ -47,5 +11,4 @@
         </div>
       <% end %>
     </div>
-  </body>
-</html>
+
