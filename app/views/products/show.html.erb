@@ -1,19 +1,19 @@
-<p><%= link_to "Quay lại", products_path %></p>
-
-<section class="product">
+<div class="container">
+  <!-- Hiển thị hình ảnh sản phẩm nếu có -->
   <%= image_tag @product.featured_image if @product.featured_image.attached? %>
 
-  <section class="product-info">
-    <% cache @product do %>
-      <h1><%= @product.name %></h1>
-      <%= @product.description %>
-    <% end %>
+  <% cache @product do %>
+    <h1><%= @product.name %></h1>
+    <p><%= @product.description %></p>
+  <% end %>
 
-    <%= render "inventory", product: @product %>
+  <!-- Hiển thị inventory (còn hàng/hết hàng và form đăng ký email nếu hết hàng) -->
+  <%= render "inventory", product: @product %>
 
-    <% if authenticated? %>
-      <%= link_to "Sửa", edit_product_path(@product) %>
-      <%= button_to "Xóa", @product, method: :delete, data: { turbo_confirm: "Mày có chắc?" } %>
-    <% end %>
-  </section>
-</section>
+  <!-- Các link để quay lại và sửa sản phẩm -->
+  <%= link_to "Quay lại", products_path, class: "link" %>
+  <%= link_to "Sửa", edit_product_path(@product), class: "link" %>
+
+  <!-- Nút xóa sản phẩm -->
+  <%= button_to "Xóa", @product, method: :delete, data: { turbo_confirm: "Mày có chắc?" }, class: "button" %>
+</div>

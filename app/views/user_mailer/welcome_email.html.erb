@@ -1,0 +1,13 @@
+<p>Xin chào <%= @user.name %>,</p>
+<p>Chào mừng bạn đến với nền tảng của chúng tôi!</p>
+
+<p>Đây là hình ảnh bạn yêu cầu:</p>
+
+<!-- Hiển thị hình ảnh nội tuyến -->
+<%= image_tag attachments['image.jpg'].url, alt: 'Welcome Image', class: 'welcome-image' %>
+
+<% cache do %>
+  <%= @company.name %>
+<% end %>
+
+<p>Chúc bạn một ngày tốt lành!</p>

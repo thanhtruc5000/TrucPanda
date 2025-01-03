@@ -1,0 +1,95 @@
+/* Căn chỉnh tiêu đề sản phẩm */
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-align: center; /* Căn giữa */
+  margin: 20px 0;
+}
+
+/* Mô tả sản phẩm */
+p {
+  font-size: 16px;
+  color: #666;
+  text-align: justify; /* Căn đều */
+  margin: 10px 0;
+}
+
+/* Hình ảnh sản phẩm */
+img {
+  display: block;
+  margin: 20px auto; /* Căn giữa */
+  max-width: 150px;
+  height: auto;
+  border-radius: 8px; /* Bo góc */
+}
+
+/* Nút và liên kết */
+a, button {
+  display: inline-block;
+  font-size: 14px;
+  margin: 10px 5px;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #FF5A5F;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Phần hiển thị inventory */
+.inventory {
+  font-size: 14px;
+  color: #444;
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* Đặt toàn bộ nội dung trong container để căn giữa */
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto; /* Căn giữa container */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Kiểu cho liên kết (Quay lại, Sửa) */
+.link {
+  font-size: 14px;
+  text-decoration: none;
+  padding: 10px 15px;
+  background-color: #007BFF;
+  color: #fff;
+  border-radius: 4px;
+  transition: background-color 0.3s ease; /* Hiệu ứng mượt khi đổi màu */
+}
+
+.link:hover {
+  background-color: #0056b3; /* Màu khi hover */
+}
+
+/* Kiểu cho nút Xóa */
+.button {
+  font-size: 14px; /* Kích thước chữ trong nút là 14px */
+  padding: 10px 15px; /* Khoảng cách bên trong (trên-dưới: 10px, trái-phải: 15px) */
+  background-color: #FF5A5F; /* Màu nền của nút là đỏ hồng (#FF5A5F) */
+  color: #fff; /* Màu chữ là trắng (#fff) */
+  border: none; /* Không có viền xung quanh nút */
+  border-radius: 4px; /* Bo tròn các góc nút với bán kính 4px */
+  cursor: pointer; /* Hiển thị con trỏ dưới dạng bàn tay khi rê chuột lên nút */
+  transition: background-color 0.3s ease; /* Hiệu ứng mượt khi thay đổi màu nền, kéo dài 0.3 giây */
+}
+
+
+.button:hover {
+  background-color: #FF3B3F; /* Màu khi hover */
+}

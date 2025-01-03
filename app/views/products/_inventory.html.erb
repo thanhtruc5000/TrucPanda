@@ -1,6 +1,6 @@
-<% if product.inventory_count? %>
-  <p><%= product.inventory_count %> sản phẩm còn hàng</p>
-<% else %>
+<link rel="stylesheet" href="./assets/stylesheets/_inventory.css">
+
+<% if product.inventory_count <= 0 %>
   <p>Hết hàng</p>
   <p>Email me when available.</p>
 
@@ -8,4 +8,6 @@
     <%= form.email_field :email, placeholder: "you@example.com", required: true %>
     <%= form.submit "Gửi" %>
   <% end %>
+<% else %>
+  <p><%= product.inventory_count %> sản phẩm còn hàng</p>
 <% end %>
